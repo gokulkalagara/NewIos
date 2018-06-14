@@ -11,7 +11,6 @@ import UIKit
 class RegisterViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var scrollView: UIScrollView!
-    
 
     @IBOutlet weak var contentView: UIView!
     
@@ -30,6 +29,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var tfZipCode: UITextField!
     
     @IBOutlet weak var lbRegister: UILabel!
+    
+    var tfCurrent : UITextField!
+    
+
     
     
     
@@ -59,7 +62,24 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
         let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.doRegister))
         lbRegister.isUserInteractionEnabled = true
         lbRegister.addGestureRecognizer(tapGesture)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(RegisterViewController.keyboardWillChange), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(RegisterViewController.keyboardWillChange), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+         NotificationCenter.default.addObserver(self, selector: #selector(RegisterViewController.keyboardWillChange), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        
 
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
     }
     
     
@@ -124,6 +144,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         let nextTag = textField.tag + 1
+       
         // Try to find next responder
         let nextResponder = textField.superview?.viewWithTag(nextTag) as UIResponder?
         
@@ -150,6 +171,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         switch textField
         {
         case tfPhoneNumber:
@@ -177,6 +199,49 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
         }
         
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField)
+    {
+        tfCurrent = textField;
+    }
+    
+    @objc func keyboardWillChange(notification: Notification)
+    {
+        Logger.log(data: notification.name.rawValue)
+        if notification.name.rawValue == "UIKeyboardWillHideNotification"
+        {
+            scrollView.frame.origin.y = 0
+        }
+        else
+        {
+            
+            let keyBoardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+            
+            Logger.log(data: "TEXT FIELD Y " , tfCurrent.frame.origin.y)
+            Logger.log(data: "KEY BOARD  H " , keyBoardFrame.height)
+            Logger.log(data: "CONTENT VIEW  H " , contentView.frame.height)
+            Logger.log(data: "SCROLL VIEW  H " , scrollView.frame.height)
+            Logger.log(data: "VIEW  H " , view.frame.height)
+
+
+            
+
+            if tfCurrent.frame.origin.y + keyBoardFrame.height >= scrollView.frame.height || tfCurrent.frame.origin.y >= keyBoardFrame.height
+            {
+                
+                var value : CGFloat = keyBoardFrame.height - tfCurrent.frame.origin.y
+                Logger.log(data: "VALUE ", value)
+                value = value > 0 ? -(value + ((tfCurrent == tfPhoneNumber || tfCurrent == tfZipCode ) ? 55.0 : 0.0 )) : value - ((tfCurrent == tfPhoneNumber || tfCurrent == tfZipCode ) ? 55.0 : 0.0 )
+                
+                scrollView.frame.origin.y = value
+                
+                Logger.log(data: "VALUE ", value)
+
+                
+            }
+        }
+        
     }
     
   
