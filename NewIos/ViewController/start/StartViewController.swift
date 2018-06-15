@@ -67,7 +67,7 @@ class StartViewController: UIViewController
     {
         Logger.log(data: "continue is clicked")
         let helperViewController = self.storyboard?.instantiateViewController(withIdentifier: "HelperViewController") as! HelperViewController
-        helperViewController.dataProvider = DataProvider(key: 7003 ,params: [:])
+        helperViewController.dataProvider = DataProvider(key: 7005 ,params: [:])
         
         self.present(helperViewController, animated: false, completion: nil)
     }

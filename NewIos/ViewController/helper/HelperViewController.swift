@@ -71,6 +71,10 @@ class HelperViewController: UIViewController, IViewController
                 changeTitle(title: "Login")
                 viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             
+            case 7005: // garages list
+                changeTitle(title: "Garages")
+                viewController = self.storyboard?.instantiateViewController(withIdentifier: "GaragesViewController") as! GaragesViewController
+            
             default:
                 changeTitle(title: "")
                 return

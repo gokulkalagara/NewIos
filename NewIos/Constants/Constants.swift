@@ -32,6 +32,8 @@ public class Constants: NSObject
     
     public static let HASH_TEXT_COLOR : String = "hash_text_color"
     
+    public static let THICK_BLUE : String = "thick_blue"
+    
     
     
     

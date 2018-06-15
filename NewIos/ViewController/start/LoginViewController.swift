@@ -18,6 +18,10 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
     
     @IBOutlet weak var lbSignIn: UILabel!
     
+    @IBOutlet weak var mainView: UIView!
+    
+    var tfCurrent : UITextField!
+    
 
     
     override func viewDidLoad()
@@ -33,6 +37,7 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
     }
 
     
+
     func setUp()
     {
         subView.layer.cornerRadius = 10
@@ -50,7 +55,24 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
         
         lbSignIn.isUserInteractionEnabled = true
         lbSignIn.addGestureRecognizer(tapGesture)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillChange) , name: UIResponder.keyboardWillHideNotification , object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillChange) , name: UIResponder.keyboardWillChangeFrameNotification , object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillChange) , name: UIResponder.keyboardWillShowNotification , object: nil)
+        
+        
     
+    }
+    
+    deinit
+    {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     @objc func doLogin(gesture: UITapGestureRecognizer)
@@ -59,11 +81,49 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
         Utility.hideKeyword(view: self.view)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        Utility.hideKeyword(view: self.view)
-        return true
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        let nextTag = textField.tag + 1
+        let uiRespond = textField.superview?.viewWithTag(nextTag) as UIResponder?
+        if uiRespond != nil{
+            uiRespond?.becomeFirstResponder()
+        }
+        else
+        {
+            textField.resignFirstResponder()
+        }
+        return false
     }
     
+    @objc func keyboardWillChange(notification: Notification)
+    {
+        Logger.log(data: notification.name.rawValue)
+        
+        if notification.name.rawValue == UIResponder.keyboardWillHideNotification.rawValue
+        {
+            mainView.frame.origin.y = 0
+        }
+        else
+        {
+            let keyBroadFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+
+            Logger.log(data: "TEXT FIELD TAG", tfCurrent.tag)
+            Logger.log(data: "TEXT FIELD Y " , tfCurrent.frame.origin.y)
+            Logger.log(data: "SUBVIEW FIELD Y " , subView.frame.origin.y)
+            Logger.log(data: "KEY BOARD  H " , keyBroadFrame.height)
+            Logger.log(data: "MAIN VIEW  H " , mainView.frame.height)
+            Logger.log(data: "TEXT FIELD H", tfCurrent.frame.height)
+            
+            if tfCurrent.frame.origin.y + keyBroadFrame.height + tfCurrent.frame.height + subView.frame.origin.y + 50.0 >= mainView.frame.height
+            {
+                mainView.frame.origin.y = -(subView.frame.origin.y + tfCurrent.frame.origin.y + keyBroadFrame.height + tfCurrent.frame.height  + 50.0 - mainView.frame.height)
+            }
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        tfCurrent = textField
+    }
 
     /*
     // MARK: - Navigation

@@ -21,11 +21,18 @@
 		8B673B9920CAC73D004714A5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B673B9820CAC73D004714A5 /* Utility.swift */; };
 		8B74264220D0FE44004C94BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B74264120D0FE44004C94BA /* LoginViewController.swift */; };
 		8B752B5E20CF9C3000A9B62E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B752B5D20CF9C3000A9B62E /* RegisterViewController.swift */; };
+		8B9FD5E620D2926100B462AF /* GaragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FD5E520D2926100B462AF /* GaragesViewController.swift */; };
+		8B9FD5E820D2967200B462AF /* GarageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FD5E720D2967200B462AF /* GarageCollectionViewCell.swift */; };
 		8BB22DA520CBAA3500CF2082 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB22DA420CBAA3500CF2082 /* Logger.swift */; };
 		8BBF50FA20CE6FC700317C04 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF50F920CE6FC700317C04 /* HomeViewController.swift */; };
 		8BBF50FD20CE8EBB00317C04 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF50FC20CE8EBB00317C04 /* MainViewController.swift */; };
 		8BBF8DC920CEA50E00258CBF /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF8DC820CEA50E00258CBF /* Protocol.swift */; };
 		8BBF8DCC20CEA67500258CBF /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF8DCB20CEA67500258CBF /* DataProvider.swift */; };
+		8BC9595120D396F50002B891 /* Garage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595020D396F50002B891 /* Garage.swift */; };
+		8BC9595420D3D4CB0002B891 /* GarageOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595320D3D4CB0002B891 /* GarageOverviewViewController.swift */; };
+		8BC9595620D3D5DF0002B891 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595520D3D5DF0002B891 /* ServicesViewController.swift */; };
+		8BC9595820D3D6080002B891 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595720D3D6080002B891 /* ReviewsViewController.swift */; };
+		8BC9595A20D3D6250002B891 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595920D3D6250002B891 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,11 +73,18 @@
 		8B673B9820CAC73D004714A5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		8B74264120D0FE44004C94BA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8B752B5D20CF9C3000A9B62E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8B9FD5E520D2926100B462AF /* GaragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaragesViewController.swift; sourceTree = "<group>"; };
+		8B9FD5E720D2967200B462AF /* GarageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8BB22DA420CBAA3500CF2082 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		8BBF50F920CE6FC700317C04 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8BBF50FC20CE8EBB00317C04 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8BBF8DC820CEA50E00258CBF /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		8BBF8DCB20CEA67500258CBF /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		8BC9595020D396F50002B891 /* Garage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garage.swift; sourceTree = "<group>"; };
+		8BC9595320D3D4CB0002B891 /* GarageOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageOverviewViewController.swift; sourceTree = "<group>"; };
+		8BC9595520D3D5DF0002B891 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		8BC9595720D3D6080002B891 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		8BC9595920D3D6250002B891 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +172,7 @@
 		8B24E56820C917E600BEC68B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8BC9595220D3D49A0002B891 /* garage */,
 				8BBF8DC720CEA39100258CBF /* helper */,
 				8BBF50F820CE6F3500317C04 /* home */,
 				8BBF8DC620CEA37300258CBF /* start */,
@@ -185,6 +200,7 @@
 		8B673B9320CAC6AC004714A5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8B9FD5E720D2967200B462AF /* GarageCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -193,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				8BBF50F920CE6FC700317C04 /* HomeViewController.swift */,
+				8B9FD5E520D2926100B462AF /* GaragesViewController.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -237,8 +254,20 @@
 			isa = PBXGroup;
 			children = (
 				8BBF8DCB20CEA67500258CBF /* DataProvider.swift */,
+				8BC9595020D396F50002B891 /* Garage.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8BC9595220D3D49A0002B891 /* garage */ = {
+			isa = PBXGroup;
+			children = (
+				8BC9595320D3D4CB0002B891 /* GarageOverviewViewController.swift */,
+				8BC9595520D3D5DF0002B891 /* ServicesViewController.swift */,
+				8BC9595720D3D6080002B891 /* ReviewsViewController.swift */,
+				8BC9595920D3D6250002B891 /* DetailsViewController.swift */,
+			);
+			path = garage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,15 +403,22 @@
 			files = (
 				8B74264220D0FE44004C94BA /* LoginViewController.swift in Sources */,
 				8B673B9920CAC73D004714A5 /* Utility.swift in Sources */,
+				8BC9595620D3D5DF0002B891 /* ServicesViewController.swift in Sources */,
+				8B9FD5E620D2926100B462AF /* GaragesViewController.swift in Sources */,
 				8B24E53D20C9147000BEC68B /* SecondViewController.swift in Sources */,
 				8B24E56B20C91B2900BEC68B /* StartViewController.swift in Sources */,
+				8BC9595820D3D6080002B891 /* ReviewsViewController.swift in Sources */,
 				8B24E53920C9147000BEC68B /* AppDelegate.swift in Sources */,
+				8BC9595420D3D4CB0002B891 /* GarageOverviewViewController.swift in Sources */,
 				8B24E53B20C9147000BEC68B /* FirstViewController.swift in Sources */,
+				8B9FD5E820D2967200B462AF /* GarageCollectionViewCell.swift in Sources */,
+				8BC9595A20D3D6250002B891 /* DetailsViewController.swift in Sources */,
 				8BBF50FA20CE6FC700317C04 /* HomeViewController.swift in Sources */,
 				8BBF8DCC20CEA67500258CBF /* DataProvider.swift in Sources */,
 				8B09466520CA4F4A003C9D18 /* HelperViewController.swift in Sources */,
 				8BBF8DC920CEA50E00258CBF /* Protocol.swift in Sources */,
 				8B673B9720CAC723004714A5 /* Constants.swift in Sources */,
+				8BC9595120D396F50002B891 /* Garage.swift in Sources */,
 				8B752B5E20CF9C3000A9B62E /* RegisterViewController.swift in Sources */,
 				8BB22DA520CBAA3500CF2082 /* Logger.swift in Sources */,
 				8BBF50FD20CE8EBB00317C04 /* MainViewController.swift in Sources */,
