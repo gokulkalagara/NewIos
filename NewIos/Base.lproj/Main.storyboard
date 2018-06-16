@@ -467,11 +467,12 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GmP-5b-w8f">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="yFO-QG-KF9"/>
+                                            <constraint firstAttribute="height" constant="130" id="yFO-QG-KF9"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kw8-ij-jLe">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kw8-ij-jLe">
                                             <size key="itemSize" width="100" height="100"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -479,7 +480,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GarageTypeCollectionViewCell" id="Osk-S2-AOd" customClass="GarageTypeCollectionViewCell" customModule="NewIos" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <rect key="frame" x="0.0" y="15" width="100" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -490,12 +491,11 @@
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="arr-7c-KcQ">
                                                                     <rect key="frame" x="25" y="12" width="50" height="50"/>
-                                                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="8tS-OE-wND"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXb-9U-5sM">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXb-9U-5sM">
                                                                     <rect key="frame" x="10" y="67" width="80" height="16"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="16" id="k8L-bm-QR2"/>
@@ -504,7 +504,7 @@
                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7A-6a-z9P">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7A-6a-z9P">
                                                                     <rect key="frame" x="35" y="86" width="30" height="3"/>
                                                                     <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <constraints>
@@ -545,9 +545,13 @@
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="yQj-7M-gkW" id="1hZ-4e-mBx"/>
+                                            <outlet property="delegate" destination="yQj-7M-gkW" id="gRX-dv-KMr"/>
+                                        </connections>
                                     </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rNq-Eh-N7o">
-                                        <rect key="frame" x="0.0" y="100" width="375" height="547"/>
+                                        <rect key="frame" x="0.0" y="130" width="375" height="517"/>
                                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zDb-lo-hYA">
                                             <size key="itemSize" width="374" height="224"/>
@@ -763,7 +767,6 @@
                                 <constraints>
                                     <constraint firstItem="rNq-Eh-N7o" firstAttribute="top" secondItem="GmP-5b-w8f" secondAttribute="bottom" id="0Nr-by-Nxd"/>
                                     <constraint firstAttribute="bottom" secondItem="rNq-Eh-N7o" secondAttribute="bottom" id="90b-03-9oF"/>
-                                    <constraint firstItem="rNq-Eh-N7o" firstAttribute="top" secondItem="3YI-nd-w5h" secondAttribute="top" constant="100" id="R67-rR-TGz"/>
                                     <constraint firstItem="rNq-Eh-N7o" firstAttribute="centerX" secondItem="3YI-nd-w5h" secondAttribute="centerX" id="T5c-ge-0cR"/>
                                     <constraint firstItem="GmP-5b-w8f" firstAttribute="leading" secondItem="3YI-nd-w5h" secondAttribute="leading" id="ZQK-wa-UcQ"/>
                                     <constraint firstItem="rNq-Eh-N7o" firstAttribute="leading" secondItem="3YI-nd-w5h" secondAttribute="leading" id="hFD-ju-UKq"/>
@@ -785,6 +788,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="rNq-Eh-N7o" id="3HL-Cz-wZ0"/>
+                        <outlet property="garageTypeCollectionView" destination="GmP-5b-w8f" id="Tgc-Q1-LZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hu-Kw-v45" userLabel="First Responder" sceneMemberID="firstResponder"/>

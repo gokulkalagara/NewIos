@@ -34,6 +34,7 @@
 		8BC9595820D3D6080002B891 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595720D3D6080002B891 /* ReviewsViewController.swift */; };
 		8BC9595A20D3D6250002B891 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595920D3D6250002B891 /* DetailsViewController.swift */; };
 		8BC9595C20D3ED870002B891 /* GarageTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595B20D3ED870002B891 /* GarageTypeCollectionViewCell.swift */; };
+		8BE8A5D720D539EF00830F07 /* GarageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8A5D620D539EF00830F07 /* GarageType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		8BC9595720D3D6080002B891 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		8BC9595920D3D6250002B891 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8BC9595B20D3ED870002B891 /* GarageTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BE8A5D620D539EF00830F07 /* GarageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 			children = (
 				8BBF8DCB20CEA67500258CBF /* DataProvider.swift */,
 				8BC9595020D396F50002B891 /* Garage.swift */,
+				8BE8A5D620D539EF00830F07 /* GarageType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				8B752B5E20CF9C3000A9B62E /* RegisterViewController.swift in Sources */,
 				8BB22DA520CBAA3500CF2082 /* Logger.swift in Sources */,
 				8BBF50FD20CE8EBB00317C04 /* MainViewController.swift in Sources */,
+				8BE8A5D720D539EF00830F07 /* GarageType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

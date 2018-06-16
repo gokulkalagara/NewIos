@@ -126,6 +126,47 @@ public class Utility: NSObject
     
     }
     
+    public static func generateGarageTypes() -> [GarageType]
+    {
+        var list : [GarageType] = []
+        
+        let gt = GarageType()
+        gt.id = 0
+        gt.name = "All"
+        gt.imageUrl = "https://raw.githubusercontent.com/gokulkalagara/foodzone/all_sub/WarrousVGarages/app/src/main/res/drawable/all.png"
+        gt.isSelected = true
+        
+        
+        let gt1 = GarageType()
+        gt1.id = 1
+        gt1.name = "General"
+        gt1.imageUrl = "http://devassets.warrous.com/Images/car_icons/general_service.png"
+        
+        let gt2 = GarageType()
+        gt2.id = 2
+        gt2.name = "Denting and Painting"
+        gt2.imageUrl = "http://devassets.warrous.com/Images/car_icons/car_paint.png"
+        
+        let gt3 = GarageType()
+        gt3.id = 1
+        gt3.name = "Car Wash"
+        gt3.imageUrl = "http://devassets.warrous.com/Images/car_icons/car_wash.jpg"
+        
+        let gt4 = GarageType()
+        gt4.id = 1
+        gt4.name = "Wheel Alignment"
+        gt4.imageUrl = "http://devassets.warrous.com/Images/car_icons/car_breakdown.png"
+        
+        list.append(gt)
+        list.append(gt1)
+        list.append(gt2)
+        list.append(gt3)
+        list.append(gt4)
+        
+        return list
+
+    }
+    
     
     
     
