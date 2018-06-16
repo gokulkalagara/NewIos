@@ -10,6 +10,19 @@ import UIKit
 
 class GarageOverviewViewController: UIViewController {
 
+    @IBOutlet weak var mainView: UIView!
+    
+    @IBOutlet weak var subView: UIView!
+    
+    @IBOutlet weak var bottomBar: UIView!
+    
+    @IBOutlet weak var lbDetails: UILabel!
+    
+    @IBOutlet weak var lbServices: UILabel!
+    
+    @IBOutlet weak var lbReviews: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

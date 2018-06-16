@@ -33,6 +33,7 @@
 		8BC9595620D3D5DF0002B891 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595520D3D5DF0002B891 /* ServicesViewController.swift */; };
 		8BC9595820D3D6080002B891 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595720D3D6080002B891 /* ReviewsViewController.swift */; };
 		8BC9595A20D3D6250002B891 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595920D3D6250002B891 /* DetailsViewController.swift */; };
+		8BC9595C20D3ED870002B891 /* GarageTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595B20D3ED870002B891 /* GarageTypeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		8BC9595520D3D5DF0002B891 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		8BC9595720D3D6080002B891 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		8BC9595920D3D6250002B891 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		8BC9595B20D3ED870002B891 /* GarageTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				8B9FD5E720D2967200B462AF /* GarageCollectionViewCell.swift */,
+				8BC9595B20D3ED870002B891 /* GarageTypeCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				8BC9595820D3D6080002B891 /* ReviewsViewController.swift in Sources */,
 				8B24E53920C9147000BEC68B /* AppDelegate.swift in Sources */,
 				8BC9595420D3D4CB0002B891 /* GarageOverviewViewController.swift in Sources */,
+				8BC9595C20D3ED870002B891 /* GarageTypeCollectionViewCell.swift in Sources */,
 				8B24E53B20C9147000BEC68B /* FirstViewController.swift in Sources */,
 				8B9FD5E820D2967200B462AF /* GarageCollectionViewCell.swift in Sources */,
 				8BC9595A20D3D6250002B891 /* DetailsViewController.swift in Sources */,

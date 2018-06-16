@@ -121,6 +121,15 @@ class GaragesViewController: UIViewController, UICollectionViewDelegate, UIColle
 //        }
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        let garage = garagesList[indexPath.row]
+        let helperViewController = self.storyboard?.instantiateViewController(withIdentifier: "HelperViewController") as! HelperViewController
+        helperViewController.dataProvider = DataProvider(key: 7006 ,params: ["Garage":garage])
+        self.present(helperViewController, animated: false, completion: nil)
+    }
+    
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        let size = CGSize(width: self.view.frame.width - 10, height: 230)
 //        return size
