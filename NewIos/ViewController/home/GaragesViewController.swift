@@ -158,7 +158,7 @@ class GaragesViewController: UIViewController, UICollectionViewDelegate, UIColle
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
-        layout.itemSize = CGSize(width: self.view.frame.width - 30, height: 224)
+        layout.itemSize = CGSize(width: size.width - 30, height: 224)
         layout.minimumInteritemSpacing = 15
         layout.minimumLineSpacing = 15
         collectionView!.collectionViewLayout = layout

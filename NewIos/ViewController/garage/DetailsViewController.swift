@@ -36,6 +36,22 @@ class DetailsViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet weak var lbDot: UILabel!
     
+    @IBOutlet weak var timingsView: UIView!
+    
+    @IBOutlet weak var imgClock: UIImageView!
+    
+    @IBOutlet weak var lbTimings: UILabel!
+    
+    @IBOutlet weak var locateView: UIView!
+    
+    @IBOutlet weak var imgLocate: UIImageView!
+    
+    @IBOutlet weak var callView: UIView!
+    
+    @IBOutlet weak var bookmarkView: UIView!
+    
+    @IBOutlet weak var imgBookmark: UIImageView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -81,6 +97,21 @@ class DetailsViewController: UIViewController, UICollectionViewDelegate, UIColle
         attributedText.addAttributes(attribs, range: NSRange.init(location: 0, length: garage.ratting))
         lbRatting.attributedText = attributedText
         
+        timingsView.layer.cornerRadius = 5
+        timingsView.clipsToBounds = true
+        
+        locateView.layer.cornerRadius = 5
+        locateView.clipsToBounds = true
+        
+        callView.layer.cornerRadius = 5
+        callView.clipsToBounds = true
+        
+        bookmarkView.layer.cornerRadius = 5
+        bookmarkView.clipsToBounds = true
+        
+        
+    
+        
         
         
         
@@ -95,7 +126,7 @@ class DetailsViewController: UIViewController, UICollectionViewDelegate, UIColle
         Logger.log(data: "OREINTATION CHANGED")
         let layoutType: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layoutType.sectionInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
-        layoutType.itemSize = CGSize(width: garageImages.count>1 ? view.frame.width - 100 : view.frame.width - 30 , height: 150)
+        layoutType.itemSize = CGSize(width: garageImages.count>1 ? size.width - 100 : size.width - 30 , height: 150)
         layoutType.minimumInteritemSpacing = 15
         layoutType.minimumLineSpacing = 15
         layoutType.scrollDirection = UICollectionView.ScrollDirection.horizontal // .horizontal
