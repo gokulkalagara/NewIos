@@ -167,6 +167,21 @@ public class Utility: NSObject
 
     }
     
+    public static func generateGarageImages() -> [String]
+    {
+        let list : [String] = ["https://media.gettyimages.com/photos/car-mechanic-using-tools-picture-id924923446",
+                               "https://media.gettyimages.com/photos/cars-on-lifts-in-auto-repair-shop-picture-id188075212",
+                               "https://media.gettyimages.com/photos/car-on-lift-in-auto-repair-shop-picture-id188075213",
+                               "https://media.gettyimages.com/photos/tools-on-cart-in-auto-repair-shop-picture-id188075211",
+                               "https://media.gettyimages.com/photos/car-repair-shop-in-japan-picture-id669872522",
+                               "https://i.pinimg.com/originals/3e/3e/14/3e3e14d932098c3c3140c419daaa61c6.jpg",
+                               "https://media.gettyimages.com/photos/auto-repair-shop-car-garage-picture-id176712668",
+                               "https://media.gettyimages.com/photos/car-service-procedure-picture-id522394158",
+                               "https://media.gettyimages.com/photos/red-and-blue-car-racing-picture-id168959214"]
+        return list
+        
+    }
+    
     
     
     

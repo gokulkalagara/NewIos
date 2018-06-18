@@ -156,8 +156,9 @@ class GaragesViewController: UIViewController, UICollectionViewDelegate, UIColle
     
         Logger.log(data: "OREINTATION CHANGED")
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
-        layout.itemSize = CGSize(width: size.width - 30, height: 224)
+        
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
+        layout.itemSize = CGSize(width: self.view.frame.width - 30, height: 224)
         layout.minimumInteritemSpacing = 15
         layout.minimumLineSpacing = 15
         collectionView!.collectionViewLayout = layout
@@ -190,11 +191,14 @@ class GaragesViewController: UIViewController, UICollectionViewDelegate, UIColle
                 garageTypeList[previousType].isSelected = false
                 garageTypeList[indexPath.row].isSelected = true
                 
-                previousIndexPath = IndexPath(row: previousType, section: 0)
+//                previousIndexPath = IndexPath(row: previousType, section: 0)
+//                self.garageTypeCollectionView.reloadItems(at: [indexPath,previousIndexPath])
+//                previousType = indexPath.row
                 
-                let garageTypeCell = garageTypeCollectionView.cellForItem(at: indexPath) as! GarageTypeCollectionViewCell
-                garageTypeCell.lbSelected.backgroundColor = Utility.getColor(value:  garageTypeList[indexPath.row].isSelected ? Constants.THICK_BLUE : Constants.WHITE)
-                previousType = indexPath.row
+                
+                //let garageTypeCell = garageTypeCollectionView.cellForItem(at: indexPath) as! GarageTypeCollectionViewCell
+                //garageTypeCell.lbSelected.backgroundColor = Utility.getColor(value:  garageTypeList[indexPath.row].isSelected ? Constants.THICK_BLUE : Constants.WHITE)
+                //previousType = indexPath.row
                 
 //                if collectionView.cellForItem(at: previousIndexPath) != nil
 //                {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GarageCollectionViewCell: UICollectionViewCell
+public class GarageCollectionViewCell: UICollectionViewCell
 {
     
     @IBOutlet weak var mainView: UIView!

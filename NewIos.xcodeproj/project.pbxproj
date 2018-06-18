@@ -34,6 +34,7 @@
 		8BC9595820D3D6080002B891 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595720D3D6080002B891 /* ReviewsViewController.swift */; };
 		8BC9595A20D3D6250002B891 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595920D3D6250002B891 /* DetailsViewController.swift */; };
 		8BC9595C20D3ED870002B891 /* GarageTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595B20D3ED870002B891 /* GarageTypeCollectionViewCell.swift */; };
+		8BD0E9C120D793A700101846 /* GarageImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD0E9C020D793A700101846 /* GarageImageCollectionViewCell.swift */; };
 		8BE8A5D720D539EF00830F07 /* GarageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8A5D620D539EF00830F07 /* GarageType.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		8BC9595720D3D6080002B891 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		8BC9595920D3D6250002B891 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8BC9595B20D3ED870002B891 /* GarageTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BD0E9C020D793A700101846 /* GarageImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8BE8A5D620D539EF00830F07 /* GarageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,8 +206,8 @@
 		8B673B9320CAC6AC004714A5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				8B9FD5E720D2967200B462AF /* GarageCollectionViewCell.swift */,
-				8BC9595B20D3ED870002B891 /* GarageTypeCollectionViewCell.swift */,
+				8BD0E9BF20D7935600101846 /* home */,
+				8BD0E9BE20D7930400101846 /* garage */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -274,6 +276,23 @@
 				8BC9595920D3D6250002B891 /* DetailsViewController.swift */,
 			);
 			path = garage;
+			sourceTree = "<group>";
+		};
+		8BD0E9BE20D7930400101846 /* garage */ = {
+			isa = PBXGroup;
+			children = (
+				8BD0E9C020D793A700101846 /* GarageImageCollectionViewCell.swift */,
+			);
+			path = garage;
+			sourceTree = "<group>";
+		};
+		8BD0E9BF20D7935600101846 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				8BC9595B20D3ED870002B891 /* GarageTypeCollectionViewCell.swift */,
+				8B9FD5E720D2967200B462AF /* GarageCollectionViewCell.swift */,
+			);
+			path = home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +441,7 @@
 				8BC9595A20D3D6250002B891 /* DetailsViewController.swift in Sources */,
 				8BBF50FA20CE6FC700317C04 /* HomeViewController.swift in Sources */,
 				8BBF8DCC20CEA67500258CBF /* DataProvider.swift in Sources */,
+				8BD0E9C120D793A700101846 /* GarageImageCollectionViewCell.swift in Sources */,
 				8B09466520CA4F4A003C9D18 /* HelperViewController.swift in Sources */,
 				8BBF8DC920CEA50E00258CBF /* Protocol.swift in Sources */,
 				8B673B9720CAC723004714A5 /* Constants.swift in Sources */,

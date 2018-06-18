@@ -70,14 +70,21 @@ class HelperViewController: UIViewController, IViewController
             case 7004: //  login
                 changeTitle(title: "Login")
                 viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            
+                break
             case 7005: // garages list
                 changeTitle(title: "Garages")
                 viewController = self.storyboard?.instantiateViewController(withIdentifier: "GaragesViewController") as! GaragesViewController
-            
+                break
             case 7006: // garage overview
                 changeTitle(title: "")
-                viewController = self.storyboard?.instantiateViewController(withIdentifier: "GarageOverviewViewController") as! GarageOverviewViewController
+                
+                let garageOverviewViewController = self.storyboard?.instantiateViewController(withIdentifier: "GarageOverviewViewController") as! GarageOverviewViewController
+                garageOverviewViewController.garage = dataProvider.params["Garage"] as? Garage
+                
+                viewController = garageOverviewViewController
+                
+                break
+            
             
             default:
                 changeTitle(title: "")

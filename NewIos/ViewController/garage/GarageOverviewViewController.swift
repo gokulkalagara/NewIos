@@ -22,11 +22,27 @@ class GarageOverviewViewController: UIViewController {
     
     @IBOutlet weak var lbReviews: UILabel!
     
+    public var garage: Garage!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUp()
         // Do any additional setup after loading the view.
+    }
+    
+    func setUp()
+    {
+        let viewController  = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        viewController.garage = garage
+        
+        self.addChild(viewController)
+        
+        viewController.view.frame = CGRect(x: 0, y: 0, width: subView.frame.width, height: subView.frame.height)
+        subView.addSubview(viewController.view)
+        viewController.didMove(toParent: self)
+        
+        
     }
     
 
