@@ -28,6 +28,8 @@
 		8BBF50FD20CE8EBB00317C04 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF50FC20CE8EBB00317C04 /* MainViewController.swift */; };
 		8BBF8DC920CEA50E00258CBF /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF8DC820CEA50E00258CBF /* Protocol.swift */; };
 		8BBF8DCC20CEA67500258CBF /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF8DCB20CEA67500258CBF /* DataProvider.swift */; };
+		8BC6959420D90DB700BFAE59 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC6959320D90DB700BFAE59 /* ServiceCollectionViewCell.swift */; };
+		8BC6959620D910A200BFAE59 /* GarageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC6959520D910A200BFAE59 /* GarageService.swift */; };
 		8BC9595120D396F50002B891 /* Garage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595020D396F50002B891 /* Garage.swift */; };
 		8BC9595420D3D4CB0002B891 /* GarageOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595320D3D4CB0002B891 /* GarageOverviewViewController.swift */; };
 		8BC9595620D3D5DF0002B891 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC9595520D3D5DF0002B891 /* ServicesViewController.swift */; };
@@ -83,6 +85,8 @@
 		8BBF50FC20CE8EBB00317C04 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8BBF8DC820CEA50E00258CBF /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		8BBF8DCB20CEA67500258CBF /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		8BC6959320D90DB700BFAE59 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BC6959520D910A200BFAE59 /* GarageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageService.swift; sourceTree = "<group>"; };
 		8BC9595020D396F50002B891 /* Garage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garage.swift; sourceTree = "<group>"; };
 		8BC9595320D3D4CB0002B891 /* GarageOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageOverviewViewController.swift; sourceTree = "<group>"; };
 		8BC9595520D3D5DF0002B891 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 				8BBF8DCB20CEA67500258CBF /* DataProvider.swift */,
 				8BC9595020D396F50002B891 /* Garage.swift */,
 				8BE8A5D620D539EF00830F07 /* GarageType.swift */,
+				8BC6959520D910A200BFAE59 /* GarageService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				8BD0E9C020D793A700101846 /* GarageImageCollectionViewCell.swift */,
+				8BC6959320D90DB700BFAE59 /* ServiceCollectionViewCell.swift */,
 			);
 			path = garage;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC6959420D90DB700BFAE59 /* ServiceCollectionViewCell.swift in Sources */,
 				8B74264220D0FE44004C94BA /* LoginViewController.swift in Sources */,
 				8B673B9920CAC73D004714A5 /* Utility.swift in Sources */,
 				8BC9595620D3D5DF0002B891 /* ServicesViewController.swift in Sources */,
@@ -449,6 +456,7 @@
 				8B752B5E20CF9C3000A9B62E /* RegisterViewController.swift in Sources */,
 				8BB22DA520CBAA3500CF2082 /* Logger.swift in Sources */,
 				8BBF50FD20CE8EBB00317C04 /* MainViewController.swift in Sources */,
+				8BC6959620D910A200BFAE59 /* GarageService.swift in Sources */,
 				8BE8A5D720D539EF00830F07 /* GarageType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

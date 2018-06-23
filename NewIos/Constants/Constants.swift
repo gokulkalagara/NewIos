@@ -34,6 +34,8 @@ public class Constants: NSObject
     
     public static let THICK_BLUE : String = "thick_blue"
     
+    public static let ICON_COLOR : String = "icon_color"
+    
     
     
     
@@ -46,6 +48,13 @@ public class Constants: NSObject
     public static let WELCOME_NOTE : String = "Welcome! \n\nThis is maya world"
     
     public static let VIEW_CONTROLLER_KEY : String = "view_controller_key"
+    
+    public static let TAG_COLORS : [UIColor] = [
+        UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0),
+        UIColor(red:0.55, green:0.27, blue:0.07, alpha:1.0),
+        UIColor(red:0.60, green:0.00, blue:0.00, alpha:1.0),
+        UIColor(red:0.00, green:0.41, blue:0.79, alpha:1.0)
+    ]
     
     
     

@@ -109,6 +109,9 @@ class DetailsViewController: UIViewController, UICollectionViewDelegate, UIColle
         bookmarkView.layer.cornerRadius = 5
         bookmarkView.clipsToBounds = true
         
+        imgClock.image = imgClock.image!.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+        imgClock.tintColor = Utility.getColor(value: Constants.ICON_COLOR)
+        
         
     
         

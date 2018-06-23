@@ -24,6 +24,8 @@ class GarageOverviewViewController: UIViewController {
     
     public var garage: Garage!
     
+    public var previous : Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,99 @@ class GarageOverviewViewController: UIViewController {
     
     func setUp()
     {
-        let viewController  = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
-        viewController.garage = garage
+        changeView(value: 1)
+        
+        let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GarageOverviewViewController.tabListener))
+        let tapGesture1 : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GarageOverviewViewController.tabListener))
+        let tapGesture2 : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GarageOverviewViewController.tabListener))
+        
+        lbDetails.isUserInteractionEnabled = true
+        lbReviews.isUserInteractionEnabled = true
+        lbServices.isUserInteractionEnabled = true
+        
+        lbDetails.addGestureRecognizer(tapGesture)
+        lbServices.addGestureRecognizer(tapGesture1)
+        lbReviews.addGestureRecognizer(tapGesture2)
+        
+        
+        
+        
+    }
+    
+    @objc public func tabListener(gesture: UITapGestureRecognizer)
+    {
+        switch gesture.view
+        {
+        case lbDetails:
+             changeView(value: 1)
+           
+            break
+            
+        case lbServices:
+            changeView(value: 2)
+            
+            break
+            
+        case lbReviews:
+            changeView(value: 3)
+            
+            break
+            
+        default:
+            return
+            
+        }
+    }
+    
+    
+    public func changeView(value: Int)
+    {
+        let viewController : UIViewController!
+        
+        if previous == value
+        {
+            return
+        }
+        
+        switch value
+        {
+        case 1:
+            let viewController1  = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+            viewController1.garage = garage
+            viewController = viewController1
+            
+            lbDetails.textColor = Utility.getColor(value: Constants.COLOR_PRIMARY)
+            lbServices.textColor = Utility.getColor(value: Constants.THICK_GRAY)
+            lbReviews.textColor = Utility.getColor(value: Constants.THICK_GRAY)
+            
+            
+            break
+        case 2:
+             let viewController2  = self.storyboard?.instantiateViewController(withIdentifier: "ServicesViewController") as! ServicesViewController
+             
+             viewController = viewController2
+             
+             lbDetails.textColor = Utility.getColor(value: Constants.THICK_GRAY)
+             lbServices.textColor = Utility.getColor(value: Constants.COLOR_PRIMARY)
+             lbReviews.textColor = Utility.getColor(value: Constants.THICK_GRAY)
+             
+             
+            break
+        case 3:
+             let viewController3  = self.storyboard?.instantiateViewController(withIdentifier: "ReviewsViewController") as! ReviewsViewController
+             
+             viewController = viewController3
+             
+             lbDetails.textColor = Utility.getColor(value: Constants.THICK_GRAY)
+             lbServices.textColor = Utility.getColor(value: Constants.THICK_GRAY)
+             lbReviews.textColor = Utility.getColor(value: Constants.COLOR_PRIMARY)
+             
+             
+            break
+            
+        default:
+            return
+        }
         
         self.addChild(viewController)
         
@@ -42,7 +135,7 @@ class GarageOverviewViewController: UIViewController {
         subView.addSubview(viewController.view)
         viewController.didMove(toParent: self)
         
-        
+        previous = value
     }
     
 
