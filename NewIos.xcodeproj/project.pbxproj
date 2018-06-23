@@ -17,6 +17,8 @@
 		8B24E55020C9147200BEC68B /* NewIosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24E54F20C9147200BEC68B /* NewIosTests.swift */; };
 		8B24E55B20C9147200BEC68B /* NewIosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24E55A20C9147200BEC68B /* NewIosUITests.swift */; };
 		8B24E56B20C91B2900BEC68B /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24E56A20C91B2900BEC68B /* StartViewController.swift */; };
+		8B4F7E6820DE70D700849107 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4F7E6720DE70D700849107 /* Review.swift */; };
+		8B4F7E6A20DE7C3600849107 /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4F7E6920DE7C3600849107 /* ReviewCollectionViewCell.swift */; };
 		8B673B9720CAC723004714A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B673B9620CAC723004714A5 /* Constants.swift */; };
 		8B673B9920CAC73D004714A5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B673B9820CAC73D004714A5 /* Utility.swift */; };
 		8B74264220D0FE44004C94BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B74264120D0FE44004C94BA /* LoginViewController.swift */; };
@@ -74,6 +76,8 @@
 		8B24E55A20C9147200BEC68B /* NewIosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIosUITests.swift; sourceTree = "<group>"; };
 		8B24E55C20C9147200BEC68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B24E56A20C91B2900BEC68B /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		8B4F7E6720DE70D700849107 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		8B4F7E6920DE7C3600849107 /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B673B9620CAC723004714A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8B673B9820CAC73D004714A5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		8B74264120D0FE44004C94BA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 				8BC9595020D396F50002B891 /* Garage.swift */,
 				8BE8A5D620D539EF00830F07 /* GarageType.swift */,
 				8BC6959520D910A200BFAE59 /* GarageService.swift */,
+				8B4F7E6720DE70D700849107 /* Review.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			children = (
 				8BD0E9C020D793A700101846 /* GarageImageCollectionViewCell.swift */,
 				8BC6959320D90DB700BFAE59 /* ServiceCollectionViewCell.swift */,
+				8B4F7E6920DE7C3600849107 /* ReviewCollectionViewCell.swift */,
 			);
 			path = garage;
 			sourceTree = "<group>";
@@ -446,12 +452,14 @@
 				8B24E53B20C9147000BEC68B /* FirstViewController.swift in Sources */,
 				8B9FD5E820D2967200B462AF /* GarageCollectionViewCell.swift in Sources */,
 				8BC9595A20D3D6250002B891 /* DetailsViewController.swift in Sources */,
+				8B4F7E6A20DE7C3600849107 /* ReviewCollectionViewCell.swift in Sources */,
 				8BBF50FA20CE6FC700317C04 /* HomeViewController.swift in Sources */,
 				8BBF8DCC20CEA67500258CBF /* DataProvider.swift in Sources */,
 				8BD0E9C120D793A700101846 /* GarageImageCollectionViewCell.swift in Sources */,
 				8B09466520CA4F4A003C9D18 /* HelperViewController.swift in Sources */,
 				8BBF8DC920CEA50E00258CBF /* Protocol.swift in Sources */,
 				8B673B9720CAC723004714A5 /* Constants.swift in Sources */,
+				8B4F7E6820DE70D700849107 /* Review.swift in Sources */,
 				8BC9595120D396F50002B891 /* Garage.swift in Sources */,
 				8B752B5E20CF9C3000A9B62E /* RegisterViewController.swift in Sources */,
 				8BB22DA520CBAA3500CF2082 /* Logger.swift in Sources */,

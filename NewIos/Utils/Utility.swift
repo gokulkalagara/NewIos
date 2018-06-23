@@ -220,7 +220,6 @@ public class Utility: NSObject
         gs8.Tag = true
         gs8.TagContent = "25% Discount"
         gs8.TagType = 2
-        
         list.append(gs1)
         list.append(gs2)
         list.append(gs3)
@@ -229,7 +228,72 @@ public class Utility: NSObject
         list.append(gs6)
         list.append(gs7)
         list.append(gs8)
+
+        return list
+    }
+    
+    public static func generateReviews() -> [Review]
+    {
+     
+        var list : [Review] = []
         
+        let r0 = Review()
+        r0.FullName = "Kate Margarita"
+        r0.Review = "You've done it again! Thank you for helping a damsel in distress, you repaired one tyre and replaced another even though I didn't have an appointment, thank you."
+        r0.ImageUrl = "https://media.gettyimages.com/photos/young-woman-shopping-online-picture-id613241502"
+        r0.Rating = 8
+        r0.CreatedDt = "23 hours ago"
+        
+        let r1 = Review()
+        r1.FullName = "Enay Bill"
+        r1.Review = "Even though it was a really busy period for them they were able to fit in my repair when my car broke down. The team were very friendly and helpful and I'll definitely use Squire Furneaux Guildford again"
+        r1.ImageUrl = "https://d2e70e9yced57e.cloudfront.net/wallethub/posts/29912/eric-klinenberg.jpg"
+        r1.Rating = 9.3
+        r1.CreatedDt = "1 day ago"
+        
+        let r2 =  Review()
+        r2.FullName = "Henry David"
+        r2.Review = "Had my MOT carried out here and have booked in for additional repairs to be carried out. Would definately recommend to friends and family"
+        r2.ImageUrl = "https://www.cs.ox.ac.uk/files/8640//profile.jpg"
+        r2.Rating = 7.8
+        r2.CreatedDt = "3 days ago"
+        
+        let r3 = Review()
+        r3.FullName = "Christin Curie"
+        r3.Review = "Due to a misunderstanding the 2  tyres were fitted on the rear by mistake. However this was quickly rectified with the incorrectly removed tyres refitted and  tyres moved to the front. Have used Chemix for exhausts and tyres for years, always good value"
+        r3.ImageUrl = "https://www.radioproject.org/wp-Review/uploads/2011/02/0711.jpg"
+        r3.Rating = 9.5
+        r3.CreatedDt = "18 days ago"
+        
+        let r4 =  Review()
+        r4.FullName = "John Rayie"
+        r4.Review = "First Class as usual"
+        r4.ImageUrl = "https://edb-cdn-prod-tqgiyve.stackpathdns.com/players/icons/9e71815e-cabb-11e7-be93-0e6c723feec8.png"
+        r4.Rating = 10
+        r4.CreatedDt = "1 month ago"
+        
+        let r5 =  Review()
+        r5.FullName = "Gates Johnson"
+        r5.Review = "Avoid at any cost!!!"
+        r5.ImageUrl = "http://www.unitytubes.com/wp-Review/uploads/2017/07/DAVIDO-4-150x150.png"
+        r5.Rating = 4.5
+        r5.CreatedDt = "2 months ago"
+        
+        let r6 =  Review()
+        r6.FullName = "Catherine Ton"
+        r6.Review = "Brilliant customer service, knowledgeable and friendly staff."
+        r6.ImageUrl = "https://media.gettyimages.com/photos/photo-of-a-woman-using-smart-phone-picture-id647677346"
+        r6.Rating = 8
+        r6.CreatedDt = "2 months ago"
+        
+        list.append(r0)
+        list.append(r1)
+        list.append(r2)
+        list.append(r3)
+        list.append(r4)
+        list.append(r5)
+        list.append(r6)
+
 
         return list
     }
