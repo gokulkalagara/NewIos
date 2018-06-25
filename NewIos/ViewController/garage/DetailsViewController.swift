@@ -154,11 +154,18 @@ class DetailsViewController: UIViewController, UICollectionViewDelegate, UIColle
         let imageUrl:NSURL = NSURL(string: garageImages[indexPath.row])!
         DispatchQueue.global(qos: .userInitiated).async
             {
-                let imageData:NSData = NSData(contentsOf: imageUrl as URL)!
-                DispatchQueue.main.async
+                do
+                {
+                    let imageData:NSData = try NSData(contentsOf: imageUrl as URL)
+                    DispatchQueue.main.async
                     {
-                        garageImageCell.imgGarage.image = UIImage(data: imageData as Data)
-                        garageImageCell.imgGarage.contentMode = UIView.ContentMode.scaleAspectFill
+                            garageImageCell.imgGarage.image = UIImage(data: imageData as Data)
+                            garageImageCell.imgGarage.contentMode = UIView.ContentMode.scaleAspectFill
+                    }
+                }
+                catch
+                {
+                    Logger.log(data: error)
                 }
         }
         

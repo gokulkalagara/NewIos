@@ -85,6 +85,15 @@ class HelperViewController: UIViewController, IViewController
                 
                 break
             
+            case 7007:
+                changeTitle(title: "Loader")
+                viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoaderViewController") as! LoaderViewController
+                break
+            
+            case 7008:
+                changeTitle(title: "Side Menu")
+                viewController = self.storyboard?.instantiateViewController(withIdentifier: "SideMenuViewController") as! SideMenuViewController
+                break
             
             default:
                 changeTitle(title: "")
@@ -99,6 +108,7 @@ class HelperViewController: UIViewController, IViewController
         viewController.view.frame = CGRect(x: 0, y: 0, width: bottomView.frame.width, height: bottomView.frame.height)
         bottomView.addSubview(viewController.view)
         viewController.didMove(toParent: self)
+        
     }
     
     @objc func dismiss(gesture: UITapGestureRecognizer)

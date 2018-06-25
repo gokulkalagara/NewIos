@@ -107,12 +107,20 @@ class GaragesViewController: UIViewController, UICollectionViewDelegate, UIColle
             let imageUrl:NSURL = NSURL(string: garagesList[indexPath.row].imageUrl)!
             DispatchQueue.global(qos: .userInitiated).async
             {
-                let imageData:NSData = NSData(contentsOf: imageUrl as URL)!
-                DispatchQueue.main.async
+                do
                 {
-                    garageCell.imgGarage.image = UIImage(data: imageData as Data)
-                    garageCell.imgGarage.contentMode = UIView.ContentMode.scaleAspectFill
+                    let imageData:NSData = try NSData(contentsOf: imageUrl as URL)
+                    DispatchQueue.main.async
+                    {
+                            garageCell.imgGarage.image = UIImage(data: imageData as Data)
+                            garageCell.imgGarage.contentMode = UIView.ContentMode.scaleAspectFill
+                    }
                 }
+                catch
+                {
+                    Logger.log(data: error)
+                }
+                
             }
 
             
@@ -137,11 +145,18 @@ class GaragesViewController: UIViewController, UICollectionViewDelegate, UIColle
             let imageUrl:NSURL = NSURL(string: garageTypeList[indexPath.row].imageUrl)!
             DispatchQueue.global(qos: .userInitiated).async
                 {
-                    let imageData:NSData = NSData(contentsOf: imageUrl as URL)!
-                    DispatchQueue.main.async
+                    do
                     {
-                            garageTypeCell.imgType.image = UIImage(data: imageData as Data)
-                            garageTypeCell.imgType.contentMode = UIView.ContentMode.scaleAspectFill
+                        let imageData:NSData = try NSData(contentsOf: imageUrl as URL)
+                        DispatchQueue.main.async
+                        {
+                                garageTypeCell.imgType.image = UIImage(data: imageData as Data)
+                                garageTypeCell.imgType.contentMode = UIView.ContentMode.scaleAspectFill
+                        }
+                    }
+                    catch
+                    {
+                        Logger.log(data: error)
                     }
             }
             

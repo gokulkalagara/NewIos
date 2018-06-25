@@ -36,6 +36,8 @@ public class Constants: NSObject
     
     public static let ICON_COLOR : String = "icon_color"
     
+    public static let AVATOR_IMAGE : String = "http://www.dreampirates.in/images/img/06-03-2018-9122-Alia-Bhatt-1-322x322.jpg"
+    
     
     
     

@@ -47,7 +47,7 @@ class ServicesViewController: UIViewController, UICollectionViewDelegate, UIColl
             serviceCell.mainView.layer.cornerRadius = 5
             serviceCell.mainView.clipsToBounds = true
         
-            serviceCell.lbServiceName.numberOfLines = 2
+            serviceCell.lbServiceName.numberOfLines = 0
             serviceCell.lbServiceName.sizeToFit()
         
             serviceCell.lbServiceName.text = garageServicesList[indexPath.row].OpCodeName
@@ -84,12 +84,19 @@ class ServicesViewController: UIViewController, UICollectionViewDelegate, UIColl
         let imageUrl:NSURL = NSURL(string: garageServicesList[indexPath.row].ImageUrl)!
             DispatchQueue.global(qos: .userInitiated).async
             {
-                    let imageData:NSData = NSData(contentsOf: imageUrl as URL)!
+                do
+                {
+                    let imageData:NSData = try NSData(contentsOf: imageUrl as URL)
                     DispatchQueue.main.async
                     {
                             serviceCell.imgService.image = UIImage(data: imageData as Data)
                             serviceCell.imgService.contentMode = UIView.ContentMode.scaleAspectFill
                     }
+                }
+                catch
+                {
+                    Logger.log(data: error)
+                }
             }
         
             

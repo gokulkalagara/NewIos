@@ -261,7 +261,7 @@ public class Utility: NSObject
         let r3 = Review()
         r3.FullName = "Christin Curie"
         r3.Review = "Due to a misunderstanding the 2  tyres were fitted on the rear by mistake. However this was quickly rectified with the incorrectly removed tyres refitted and  tyres moved to the front. Have used Chemix for exhausts and tyres for years, always good value"
-        r3.ImageUrl = "https://www.radioproject.org/wp-Review/uploads/2011/02/0711.jpg"
+        r3.ImageUrl = "https://media.gettyimages.com/photos/photo-of-a-woman-using-smart-phone-picture-id647677346"
         r3.Rating = 9.5
         r3.CreatedDt = "18 days ago"
         
@@ -275,7 +275,7 @@ public class Utility: NSObject
         let r5 =  Review()
         r5.FullName = "Gates Johnson"
         r5.Review = "Avoid at any cost!!!"
-        r5.ImageUrl = "http://www.unitytubes.com/wp-Review/uploads/2017/07/DAVIDO-4-150x150.png"
+        r5.ImageUrl = "https://www.cs.ox.ac.uk/files/8640//profile.jpg"
         r5.Rating = 4.5
         r5.CreatedDt = "2 months ago"
         
@@ -295,6 +295,49 @@ public class Utility: NSObject
         list.append(r6)
 
 
+        return list
+    }
+    
+    public static func generateMenu() -> [Menu]
+    {
+        var list : [Menu] = []
+        
+        let m1 = Menu()
+        m1.name = "Home"
+        
+        let m12 = Menu()
+        m12.name = "Profile"
+        
+        let m13 = Menu()
+        m13.name = "Appointments"
+        
+        let m2 = Menu()
+        m2.name = "Previous Orders"
+        
+        let m3 = Menu()
+        m3.name = "Transactions"
+        
+        let m4 = Menu()
+        m4.name = "Help"
+        
+        let m5 = Menu()
+        m5.name = "About Us"
+        
+        let m6 = Menu()
+        m6.name = "Logout"
+        
+        
+        list.append(m1)
+        list.append(m12)
+        list.append(m13)
+        list.append(m2)
+        list.append(m3)
+        list.append(m4)
+        list.append(m5)
+        list.append(m6)
+        
+        
+        
         return list
     }
     

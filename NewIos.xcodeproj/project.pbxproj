@@ -26,6 +26,10 @@
 		8B9FD5E620D2926100B462AF /* GaragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FD5E520D2926100B462AF /* GaragesViewController.swift */; };
 		8B9FD5E820D2967200B462AF /* GarageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9FD5E720D2967200B462AF /* GarageCollectionViewCell.swift */; };
 		8BB22DA520CBAA3500CF2082 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB22DA420CBAA3500CF2082 /* Logger.swift */; };
+		8BB8111820E0C51100336D7D /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8111720E0C51100336D7D /* LoaderViewController.swift */; };
+		8BB8111B20E0E40000336D7D /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8111A20E0E40000336D7D /* SideMenuViewController.swift */; };
+		8BB8111D20E0F19500336D7D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8111C20E0F19500336D7D /* Menu.swift */; };
+		8BB8112020E0F27500336D7D /* MenuItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8111F20E0F27500336D7D /* MenuItemCollectionViewCell.swift */; };
 		8BBF50FA20CE6FC700317C04 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF50F920CE6FC700317C04 /* HomeViewController.swift */; };
 		8BBF50FD20CE8EBB00317C04 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF50FC20CE8EBB00317C04 /* MainViewController.swift */; };
 		8BBF8DC920CEA50E00258CBF /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF8DC820CEA50E00258CBF /* Protocol.swift */; };
@@ -85,6 +89,10 @@
 		8B9FD5E520D2926100B462AF /* GaragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaragesViewController.swift; sourceTree = "<group>"; };
 		8B9FD5E720D2967200B462AF /* GarageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8BB22DA420CBAA3500CF2082 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		8BB8111720E0C51100336D7D /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		8BB8111A20E0E40000336D7D /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		8BB8111C20E0F19500336D7D /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		8BB8111F20E0F27500336D7D /* MenuItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		8BBF50F920CE6FC700317C04 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8BBF50FC20CE8EBB00317C04 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8BBF8DC820CEA50E00258CBF /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -186,6 +194,7 @@
 		8B24E56820C917E600BEC68B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8BB8111620E0C4C600336D7D /* other */,
 				8BC9595220D3D49A0002B891 /* garage */,
 				8BBF8DC720CEA39100258CBF /* helper */,
 				8BBF50F820CE6F3500317C04 /* home */,
@@ -220,9 +229,34 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		8BB8111620E0C4C600336D7D /* other */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8111720E0C51100336D7D /* LoaderViewController.swift */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		8BB8111920E0E3BF00336D7D /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8111A20E0E40000336D7D /* SideMenuViewController.swift */,
+			);
+			path = navigation;
+			sourceTree = "<group>";
+		};
+		8BB8111E20E0F23600336D7D /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8111F20E0F27500336D7D /* MenuItemCollectionViewCell.swift */,
+			);
+			path = navigation;
+			sourceTree = "<group>";
+		};
 		8BBF50F820CE6F3500317C04 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				8BB8111920E0E3BF00336D7D /* navigation */,
 				8BBF50F920CE6FC700317C04 /* HomeViewController.swift */,
 				8B9FD5E520D2926100B462AF /* GaragesViewController.swift */,
 			);
@@ -273,6 +307,7 @@
 				8BE8A5D620D539EF00830F07 /* GarageType.swift */,
 				8BC6959520D910A200BFAE59 /* GarageService.swift */,
 				8B4F7E6720DE70D700849107 /* Review.swift */,
+				8BB8111C20E0F19500336D7D /* Menu.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +336,7 @@
 		8BD0E9BF20D7935600101846 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				8BB8111E20E0F23600336D7D /* navigation */,
 				8BC9595B20D3ED870002B891 /* GarageTypeCollectionViewCell.swift */,
 				8B9FD5E720D2967200B462AF /* GarageCollectionViewCell.swift */,
 			);
@@ -439,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BC6959420D90DB700BFAE59 /* ServiceCollectionViewCell.swift in Sources */,
+				8BB8111820E0C51100336D7D /* LoaderViewController.swift in Sources */,
 				8B74264220D0FE44004C94BA /* LoginViewController.swift in Sources */,
 				8B673B9920CAC73D004714A5 /* Utility.swift in Sources */,
 				8BC9595620D3D5DF0002B891 /* ServicesViewController.swift in Sources */,
@@ -449,6 +486,7 @@
 				8B24E53920C9147000BEC68B /* AppDelegate.swift in Sources */,
 				8BC9595420D3D4CB0002B891 /* GarageOverviewViewController.swift in Sources */,
 				8BC9595C20D3ED870002B891 /* GarageTypeCollectionViewCell.swift in Sources */,
+				8BB8112020E0F27500336D7D /* MenuItemCollectionViewCell.swift in Sources */,
 				8B24E53B20C9147000BEC68B /* FirstViewController.swift in Sources */,
 				8B9FD5E820D2967200B462AF /* GarageCollectionViewCell.swift in Sources */,
 				8BC9595A20D3D6250002B891 /* DetailsViewController.swift in Sources */,
@@ -465,6 +503,8 @@
 				8BB22DA520CBAA3500CF2082 /* Logger.swift in Sources */,
 				8BBF50FD20CE8EBB00317C04 /* MainViewController.swift in Sources */,
 				8BC6959620D910A200BFAE59 /* GarageService.swift in Sources */,
+				8BB8111B20E0E40000336D7D /* SideMenuViewController.swift in Sources */,
+				8BB8111D20E0F19500336D7D /* Menu.swift in Sources */,
 				8BE8A5D720D539EF00830F07 /* GarageType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

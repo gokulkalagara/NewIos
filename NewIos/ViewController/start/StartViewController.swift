@@ -65,9 +65,15 @@ class StartViewController: UIViewController
     
     @objc func goToOther(gesture: UITapGestureRecognizer)
     {
+        
+        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+         self.present(homeViewController, animated: false, completion: nil)
+        
+        return
+            
         Logger.log(data: "continue is clicked")
         let helperViewController = self.storyboard?.instantiateViewController(withIdentifier: "HelperViewController") as! HelperViewController
-        helperViewController.dataProvider = DataProvider(key: 7005 ,params: [:])
+        helperViewController.dataProvider = DataProvider(key: 7008 ,params: [:])
         
         self.present(helperViewController, animated: false, completion: nil)
     }

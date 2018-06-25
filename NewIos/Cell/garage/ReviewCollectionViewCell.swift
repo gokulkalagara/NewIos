@@ -8,6 +8,19 @@
 
 import UIKit
 
-class ReviewCollectionViewCell: UICollectionViewCell {
+class ReviewCollectionViewCell: UICollectionViewCell
+{
+    
+    @IBOutlet weak var mainView: UIView!
+    
+    @IBOutlet weak var imgUser: UIImageView!
+    
+    @IBOutlet weak var lbUserName: UILabel!
+    
+    @IBOutlet weak var lbRating: UILabel!
+    
+    @IBOutlet weak var lbTimeAgo: UILabel!
+    
+    @IBOutlet weak var lbReview: UILabel!
     
 }
