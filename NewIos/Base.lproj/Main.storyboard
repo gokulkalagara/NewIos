@@ -148,6 +148,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahu-9W-wyd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2w-Dz-GZR">
                                 <rect key="frame" x="0.0" y="20" width="320" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -205,17 +209,22 @@
                         <constraints>
                             <constraint firstItem="D2Q-kI-pxd" firstAttribute="leading" secondItem="MFM-BR-kf6" secondAttribute="leading" id="55O-BY-unl"/>
                             <constraint firstItem="D2Q-kI-pxd" firstAttribute="trailing" secondItem="MFM-BR-kf6" secondAttribute="trailing" id="7wP-Wa-hhK"/>
+                            <constraint firstItem="ahu-9W-wyd" firstAttribute="trailing" secondItem="MFM-BR-kf6" secondAttribute="trailing" id="7wn-IZ-DQ8"/>
                             <constraint firstItem="U2w-Dz-GZR" firstAttribute="bottom" secondItem="MFM-BR-kf6" secondAttribute="bottom" id="GST-KF-bbc"/>
                             <constraint firstItem="D2Q-kI-pxd" firstAttribute="bottom" secondItem="MFM-BR-kf6" secondAttribute="bottom" id="JiT-eN-sux"/>
+                            <constraint firstItem="ahu-9W-wyd" firstAttribute="leading" secondItem="MFM-BR-kf6" secondAttribute="leading" id="QmO-Cj-835"/>
+                            <constraint firstItem="ahu-9W-wyd" firstAttribute="bottom" secondItem="MFM-BR-kf6" secondAttribute="bottom" id="gfe-UE-fCt"/>
                             <constraint firstItem="U2w-Dz-GZR" firstAttribute="top" secondItem="MFM-BR-kf6" secondAttribute="top" id="ozq-ae-U9R"/>
                             <constraint firstItem="MFM-BR-kf6" firstAttribute="trailing" secondItem="U2w-Dz-GZR" secondAttribute="trailing" constant="55" id="rkR-io-h6x"/>
                             <constraint firstItem="D2Q-kI-pxd" firstAttribute="top" secondItem="MFM-BR-kf6" secondAttribute="top" id="u22-tw-JVk"/>
                             <constraint firstItem="U2w-Dz-GZR" firstAttribute="leading" secondItem="MFM-BR-kf6" secondAttribute="leading" id="uct-gF-osW"/>
+                            <constraint firstItem="ahu-9W-wyd" firstAttribute="top" secondItem="MFM-BR-kf6" secondAttribute="top" id="xG6-hB-s3j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MFM-BR-kf6"/>
                     </view>
                     <connections>
                         <outlet property="imgSideMenu" destination="7vK-DW-W3H" id="Yih-1V-ZgI"/>
+                        <outlet property="lbTitle" destination="udS-vI-A94" id="y3D-HG-Bt8"/>
                         <outlet property="mainView" destination="D2Q-kI-pxd" id="B20-6p-u5o"/>
                         <outlet property="sideMenuView" destination="U2w-Dz-GZR" id="IRU-F4-m85"/>
                         <outlet property="subView" destination="B13-Df-HnV" id="MI5-f0-rOu"/>

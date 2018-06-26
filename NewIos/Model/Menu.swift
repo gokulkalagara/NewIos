@@ -11,4 +11,7 @@ import UIKit
 public class Menu: NSObject
 {
     public var name: String!
+    
+    public var isSelected: Bool = false
+    
 }

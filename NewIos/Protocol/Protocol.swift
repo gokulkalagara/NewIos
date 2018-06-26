@@ -16,3 +16,8 @@ public protocol IViewController
 public protocol IMessage{
     
 }
+
+public protocol ISwitchView
+{
+    func changeView(position: Int)
+}

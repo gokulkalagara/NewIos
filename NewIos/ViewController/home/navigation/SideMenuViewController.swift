@@ -11,7 +11,8 @@ import UIKit
 class SideMenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
    
     
-
+    var iSwitchView : ISwitchView!
+    
     @IBOutlet weak var mainView: UIView!
     
     @IBOutlet weak var profileView: UIView!
@@ -54,16 +55,16 @@ class SideMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         imgProfile.layer.cornerRadius = 34
         imgProfile.clipsToBounds = true
         
-        let shadowSize : CGFloat = 1.0
-        let shadowPath = UIBezierPath(rect: CGRect(x: 0,
-                                                   y: 2,
-                                                   width: self.mainView.frame.width + shadowSize,
-                                                   height: view.frame.height - 23 ))
-        self.mainView.layer.masksToBounds = false
-        self.mainView.layer.shadowColor = UIColor.black.cgColor
-        self.mainView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        self.mainView.layer.shadowOpacity = 0.4
-        self.mainView.layer.shadowPath = shadowPath.cgPath
+//        let shadowSize : CGFloat = 1.0
+//        let shadowPath = UIBezierPath(rect: CGRect(x: 0,
+//                                                   y: 2,
+//                                                   width: self.mainView.frame.width + shadowSize,
+//                                                   height: view.frame.height - 23 ))
+//        self.mainView.layer.masksToBounds = false
+//        self.mainView.layer.shadowColor = UIColor.black.cgColor
+//        self.mainView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+//        self.mainView.layer.shadowOpacity = 0.4
+//        self.mainView.layer.shadowPath = shadowPath.cgPath
         
         let imageUrl:NSURL = NSURL(string: Constants.AVATOR_IMAGE)!
         DispatchQueue.global(qos: .userInitiated).async
@@ -107,6 +108,11 @@ class SideMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         return menuCell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        iSwitchView.changeView(position: indexPath.row)
+    }
+    
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
     {
@@ -120,17 +126,20 @@ class SideMenuViewController: UIViewController, UICollectionViewDelegate, UIColl
         layout.minimumLineSpacing = 15
         collectionView!.collectionViewLayout = layout
         
+        let homeViewController =  self.parent as! HomeViewController
+        homeViewController.sideMenu = false
         
-        let shadowSize : CGFloat = 1.0
-        let shadowPath = UIBezierPath(rect: CGRect(x: 0,
-                                                   y: 2,
-                                                   width: size.width + shadowSize - 50,
-                                                   height: size.height - 23 ))
-        self.mainView.layer.masksToBounds = false
-        self.mainView.layer.shadowColor = UIColor.black.cgColor
-        self.mainView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        self.mainView.layer.shadowOpacity = 0.4
-        self.mainView.layer.shadowPath = shadowPath.cgPath
+        
+//        let shadowSize : CGFloat = 1.0
+//        let shadowPath = UIBezierPath(rect: CGRect(x: 0,
+//                                                   y: 2,
+//                                                   width: size.width + shadowSize - 50,
+//                                                   height: size.height - 23 ))
+//        self.mainView.layer.masksToBounds = false
+//        self.mainView.layer.shadowColor = UIColor.black.cgColor
+//        self.mainView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+//        self.mainView.layer.shadowOpacity = 0.4
+//        self.mainView.layer.shadowPath = shadowPath.cgPath
         
     }
 

@@ -8,13 +8,16 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, IViewController , ISwitchView
+{
+    
+    @IBOutlet weak var lbTitle: UILabel!
+    
     @IBOutlet weak var imgSideMenu: UIImageView!
     
     @IBOutlet weak var sideMenuView: UIView!
     
-    var sideMenu : Bool = false
+    public var sideMenu : Bool = false
     
     @IBOutlet weak var mainView: UIView!
     
@@ -32,6 +35,7 @@ class HomeViewController: UIViewController {
         
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SideMenuViewController") as! SideMenuViewController
         self.addChild(viewController)
+        viewController.iSwitchView = self
         viewController.view.frame = CGRect(x: 0, y: 0, width: sideMenuView.frame.width, height: sideMenuView.frame.height)
         sideMenuView.addSubview(viewController.view)
         viewController.didMove(toParent: self)
@@ -49,7 +53,7 @@ class HomeViewController: UIViewController {
         
         if sideMenu
         {
-            mainView.frame.origin.x = view.frame.width - 50
+            mainView.frame.origin.x = view.frame.width - 53
         }
         else
         {
@@ -62,6 +66,11 @@ class HomeViewController: UIViewController {
     
     @objc public func controlSideMenu(gesture: UITapGestureRecognizer)
     {
+        doSlide()
+    }
+    
+    public func doSlide()
+    {
         if sideMenu
         {
             mainView.frame.origin.x = 0
@@ -69,10 +78,55 @@ class HomeViewController: UIViewController {
         }
         else
         {
-            mainView.frame.origin.x = view.frame.width - 50
+            mainView.frame.origin.x = view.frame.width - 53
             sideMenu = true
         }
     }
+    
+    func changeView(position: Int)
+    {
+        mainView.frame.origin.x = 0
+        sideMenu = false
+        changeTitle(title: Utility.generateMenu()[position].name)
+        switch position
+        {
+        case 0:
+            break
+        case 1:
+            break
+        case 2:
+            break
+        case 3:
+            break
+        case 4:
+            break
+        case 5:
+            break
+        case 6:
+            break
+        default:
+            break
+        }
+        
+    }
+    
+    func changeTitle(title: String) {
+        lbTitle.text = title
+    }
+    
+    func showSnackBar(message: String)
+    {
+        
+    }
+    
+   
+    
+    
+    
+  
+    
+
+    
     
     
    
